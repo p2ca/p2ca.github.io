@@ -6,7 +6,7 @@ subtitle: M.S. student in Electrical Engineering, <a href='https://www.nyu.edu/'
 
 profile:
   align: right
-  image: # add your photo to assets/img/ and put the filename here
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Dept. of Electrical and Computer Engineering</p>
@@ -26,6 +26,23 @@ latest_posts:
   scrollable: true
   limit: 3
 ---
+
+
+<style>
+  /* Headshot is a tight ID-photo crop, so render it smaller than the
+     al-folio default width; more-info text wraps under it. */
+  .profile {
+    max-width: 200px;
+  }
+  .profile img {
+    width: 100%;
+    height: auto;
+  }
+  /* al-folio bolds only the given name by default; bold the surname to match. */
+  .post-title {
+    font-weight: var(--font-weight-bold, 700);
+  }
+</style>
 
 I am an M.S. student in Electrical Engineering at **New York University**, where I work on machine learning
 under distribution shift. Before NYU I received my B.Eng. in Automation from **Tsinghua University**.
