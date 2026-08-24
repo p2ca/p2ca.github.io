@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: M.S. student in Electrical Engineering, <a href='https://www.nyu.edu/'>New York University</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: # add your photo to assets/img/ and put the filename here
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Dept. of Electrical and Computer Engineering</p>
+    <p>New York University</p>
+    <p>New York, NY</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -22,13 +22,29 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
+  scrollable: true
+  limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am an M.S. student in Electrical Engineering at **New York University**, where I work on machine learning
+under distribution shift. Before NYU I received my B.Eng. in Automation from **Tsinghua University**.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research asks a fairly practical question: **when we transfer a learned model to a new environment, what
+should actually transfer, and what should not?** Most transfer methods align source and target
+representations wholesale, which quietly forces genuinely site-specific structure to be shared. I am more
+interested in *decomposing* a representation into the part that generalizes and the part that does not, so
+that both can be used deliberately.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I currently work on this in the context of **hydrological forecasting**. In collaboration with researchers at
+Oak Ridge National Laboratory and Stevens Institute of Technology, I developed DARSD-ResMetaLSTM, which
+decomposes latent states with a learnable invariant basis to forecast inflow at data-scarce reservoirs.
+Evaluated across six snow/rain transfer scenarios on 33 U.S. reservoirs, it outperforms standard alignment
+baselines in both cross-regime directions.
+
+Earlier, at Tsinghua's Institute of Information Processing, I worked on **camouflaged and salient object
+detection**, studying how objects that are visually entangled with their background can still be separated —
+in retrospect, a computer-vision version of the same decomposition question.
+
+I am applying to **Ph.D. programs for Fall 2027**. If my work overlaps with yours, I would be glad to hear
+from you.

@@ -2,9 +2,8 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 email: HS6143@nyu.edu # your email address
+orcid_id: 0009-0007-8821-0756 # your ORCID iD
 github_username: p2ca # your GitHub username
-rss_icon: true # comment this line to hide the RSS icon
 # cv_pdf: # filename of your CV placed in assets/pdf/ (e.g. cv.pdf)
 # scholar_userid: # your Google Scholar ID
 # linkedin_username: # your LinkedIn username
-# orcid_id: # your ORCID iD
