@@ -42,6 +42,34 @@ latest_posts:
   .post-title {
     font-weight: var(--font-weight-bold, 700);
   }
+
+  /* Education cards. Colors come from theme variables so dark mode follows. */
+  #education .edu-entry {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  #education .edu-entry:last-child {
+    border-bottom: none;
+  }
+  #education .edu-logo {
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  #education .edu-degree {
+    font-weight: var(--font-weight-bold, 700);
+  }
+  #education .edu-school {
+    color: var(--global-text-color);
+  }
+  #education .edu-meta {
+    color: var(--global-text-color-light);
+    font-size: 0.9em;
+  }
 </style>
 
 I am an M.S. student in Electrical Engineering at **New York University**, where I work on machine learning
@@ -65,3 +93,47 @@ in retrospect, a computer-vision version of the same decomposition question.
 
 I am applying to **Ph.D. programs for Fall 2027**. If my work overlaps with yours, I would be glad to hear
 from you.
+
+
+<div id="education">
+  <h2>education</h2>
+
+  <div class="edu-entry">
+    <img class="edu-logo" src="/assets/img/logo_nyu.png" alt="New York University" onerror="this.style.display='none'">
+    <div class="edu-text">
+      <div class="edu-degree">M.S. in Electrical Engineering</div>
+      <div class="edu-school">New York University</div>
+      <div class="edu-meta">Sep 2025 &ndash; Jun 2027 &middot; New York, NY</div>
+    </div>
+  </div>
+
+  <div class="edu-entry">
+    <img class="edu-logo" src="/assets/img/logo_tsinghua.png" alt="Tsinghua University" onerror="this.style.display='none'">
+    <div class="edu-text">
+      <div class="edu-degree">B.Eng. in Automation</div>
+      <div class="edu-school">Tsinghua University, Department of Automation</div>
+      <div class="edu-meta">Sep 2021 &ndash; Jul 2025 &middot; Beijing, China</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // The gem-owned `about` layout renders profile -> content -> news -> publications
+  // with no education slot. Relocate the block below the news list rather than
+  // shadowing the layout (which would create upgrade drift). Without JS the
+  // section simply stays above news.
+  (function () {
+    function place() {
+      var edu = document.getElementById("education");
+      var news = document.querySelector("article .news");
+      if (edu && news && news.parentNode) {
+        news.parentNode.insertBefore(edu, news.nextSibling);
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", place);
+    } else {
+      place();
+    }
+  })();
+</script>
