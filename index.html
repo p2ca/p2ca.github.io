@@ -55,19 +55,17 @@
   }
 
   /* Same reclaimed width for the selected-publications preview. */
-  /* The architecture figure is 2.5:1; in al-folio's narrow thumbnail column it
-     renders ~190px wide, which puts its labels at ~3px. Give the preview the
-     full row width so the complete figure stays readable, and keep the venue
-     badge from stretching along with it. */
+  /* Compact thumbnail beside the entry text. 30% is the widest this column can
+     go before it starts squeezing the 620px text column (620 + 280 < 930). */
   .publications .row > .col-sm-2.abbr {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 30%;
+    max-width: 30%;
   }
   .publications .row > .col-sm-2.abbr abbr.badge {
-    max-width: 150px;
+    max-width: 160px;
   }
   .publications .row > .col-sm-2.abbr figure {
-    margin: 0.6rem 0 0.2rem;
+    margin: 0.5rem 0 0;
   }
 </style> <p>I am an M.S. student in Electrical Engineering at <strong>New York University</strong>, where I work on machine learning under distribution shift. Before NYU I received my B.Eng. in Automation from <strong>Tsinghua University</strong>.</p> <p>My research asks a fairly practical question: <strong>when we transfer a learned model to a new environment, what should actually transfer, and what should not?</strong> Most transfer methods align source and target representations wholesale, which quietly forces genuinely site-specific structure to be shared. I am more interested in <em>decomposing</em> a representation into the part that generalizes and the part that does not, so that both can be used deliberately.</p> <p>I currently work on this in the context of <strong>hydrological forecasting</strong>. In collaboration with researchers at Oak Ridge National Laboratory and Stevens Institute of Technology, I developed DARSD-ResMetaLSTM, which decomposes latent states with a learnable invariant basis to forecast inflow at data-scarce reservoirs. Evaluated across six snow/rain transfer scenarios on 33 U.S. reservoirs, it outperforms standard alignment baselines in both cross-regime directions.</p> <p>Earlier, at Tsinghua’s Institute of Information Processing, I worked on <strong>camouflaged and salient object detection</strong>, studying how objects that are visually entangled with their background can still be separated — in retrospect, a computer-vision version of the same decomposition question.</p> <p>I am applying to <strong>Ph.D. programs for Fall 2027</strong>. If my work overlaps with yours, I would be glad to hear from you.</p> <div id="education"> <h2>education</h2> <div class="edu-entry"> <img class="edu-logo" src="/assets/img/logo_nyu.png" alt="New York University" onerror="this.style.display='none'"> <div class="edu-text"> <div class="edu-degree">M.S. in Electrical Engineering</div> <div class="edu-school">New York University</div> <div class="edu-meta">Sep 2025 – Jun 2027 · New York, NY</div> </div> </div> <div class="edu-entry"> <img class="edu-logo" src="/assets/img/logo_tsinghua.png" alt="Tsinghua University" onerror="this.style.display='none'"> <div class="edu-text"> <div class="edu-degree">B.Eng. in Automation</div> <div class="edu-school">Tsinghua University, Department of Automation</div> <div class="edu-meta">Sep 2021 – Jul 2025 · Beijing, China</div> </div> </div> </div> <script>
   // The gem-owned `about` layout renders profile -> content -> news -> publications

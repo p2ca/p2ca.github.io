@@ -8,19 +8,17 @@
   /* al-folio gives the thumbnail column 2 of 12 grid columns and the text 8,
      leaving 2 columns of every publication row unused. Reclaim them so the
      preview figure is large enough to read instead of a 125px smudge. */
-  /* The architecture figure is 2.5:1; in al-folio's narrow thumbnail column it
-     renders ~190px wide, which puts its labels at ~3px. Give the preview the
-     full row width so the complete figure stays readable, and keep the venue
-     badge from stretching along with it. */
+  /* Compact thumbnail beside the entry text. 30% is the widest this column can
+     go before it starts squeezing the 620px text column (620 + 280 < 930). */
   .publications .row > .col-sm-2.abbr {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 30%;
+    max-width: 30%;
   }
   .publications .row > .col-sm-2.abbr abbr.badge {
-    max-width: 150px;
+    max-width: 160px;
   }
   .publications .row > .col-sm-2.abbr figure {
-    margin: 0.6rem 0 0.2rem;
+    margin: 0.5rem 0 0;
   }
 </style> <script src="/assets/js/bibsearch.js?v=1bc438ca9037884cc579601c09afd847" type="module"></script> <p><input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input" placeholder="Type to filter"></p> <div class="publications"> <h2 class="bibliography">2026</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#005A83"> <a href="https://aisummit.acm.org/" rel="external nofollow noopener" target="_blank">ACM AI Summit</a> </abbr> <figure> <picture> <img src="/assets/img/publication_preview/darsd_architecture.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="darsd_architecture.png" data-zoomable="" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div id="song2026darsd" class="col-sm-8"> <div class="title">Domain-Adaptive Reservoir Inflow Forecasting via Invariant-Basis Representation Decomposition</div> <div class="author"> Haojun Song, Pengfei Hu, Xiaoxue Han, and <span class="more-authors" title="click to view 3 more authors" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '3 more authors' ? 'Yue Ning, Dan Lu, Ming Fan' : '3 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">3 more authors</span> </div> <div class="periodical"> <em>In ACM AI Leadership Summit</em>, Aug 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="abstract hidden"> <p>Forecasting inflow at data-scarce reservoirs often requires transferring knowledge from data-rich sites, but hydroclimatic shifts make it unclear what should transfer. To address this, we organize reservoir information into three sources: the dynamic hydrometeorological sequence, static reservoir attributes, and latent reservoir context. We propose DARSD-ResMetaLSTM, which encodes the dynamic hydrometeorological sequence with reservoir-specific context, decomposes the resulting latent state into shared and reservoir-specific components with a learnable invariant basis, and then uses static reservoir attributes to refine the decomposed forecast state. We evaluated it on 33 U.S. reservoirs across six snow/rain transfer scenarios, and it outperforms alignment methods in both cross-regime directions, showing that explicit decomposition enables more reliable use of reservoir information under domain shift.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">song2026darsd</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Domain-Adaptive Reservoir Inflow Forecasting via Invariant-Basis Representation Decomposition}</span><span class="p">,</span>
