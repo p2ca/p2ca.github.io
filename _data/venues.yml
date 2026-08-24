@@ -1,9 +1,5 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Keys must match the `abbr` field of a bibliography entry exactly.
+# Supported fields: `url` (makes the badge a link) and `color` (badge background).
+"ACM AI Summit":
+  url: https://aisummit.acm.org/
+  color: "#005A83" # ACM AI Leadership Summit brand blue
