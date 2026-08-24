@@ -79,19 +79,17 @@ latest_posts:
   }
 
   /* Same reclaimed width for the selected-publications preview. */
-  /* The architecture figure is 2.5:1; in al-folio's narrow thumbnail column it
-     renders ~190px wide, which puts its labels at ~3px. Give the preview the
-     full row width so the complete figure stays readable, and keep the venue
-     badge from stretching along with it. */
+  /* Compact thumbnail beside the entry text. 30% is the widest this column can
+     go before it starts squeezing the 620px text column (620 + 280 < 930). */
   .publications .row > .col-sm-2.abbr {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 30%;
+    max-width: 30%;
   }
   .publications .row > .col-sm-2.abbr abbr.badge {
-    max-width: 150px;
+    max-width: 160px;
   }
   .publications .row > .col-sm-2.abbr figure {
-    margin: 0.6rem 0 0.2rem;
+    margin: 0.5rem 0 0;
   }
 </style>
 
