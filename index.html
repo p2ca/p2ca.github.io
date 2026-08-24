@@ -36,6 +36,13 @@
     height: 56px;
     object-fit: contain;
   }
+  /* Both seals are dark purple line art on transparency, which loses contrast
+     against the dark theme background. Give them a light disc to sit on. */
+  html[data-theme="dark"] #education .edu-logo {
+    background: #fff;
+    border-radius: 50%;
+    padding: 2px;
+  }
   #education .edu-degree {
     font-weight: var(--font-weight-bold, 700);
   }
