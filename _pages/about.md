@@ -77,6 +77,12 @@ latest_posts:
     color: var(--global-text-color-light);
     font-size: 0.9em;
   }
+
+  /* Same reclaimed width for the selected-publications preview. */
+  .publications .row > .col-sm-2.abbr {
+    flex: 0 0 24%;
+    max-width: 24%;
+  }
 </style>
 
 I am an M.S. student in Electrical Engineering at **New York University**, where I work on machine learning
