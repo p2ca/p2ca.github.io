@@ -84,10 +84,3 @@ cv:
       - name: Statistical Analysis
         icon: fa-solid fa-chart-line
         keywords: "R (caret, tidyr, dplyr, ggplot2, shiny)"
-
-    Languages:
-      - name: Chinese
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Professional working proficiency"
